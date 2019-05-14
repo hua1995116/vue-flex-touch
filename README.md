@@ -48,8 +48,12 @@ methods: {
 
 # examle
 
-## base 
+## base
 [![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n0v3orw484?fontsize=14)
+
+## use it on chat @
+
+[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/oovv1q83zz?fontsize=14)
 
 # options
 
