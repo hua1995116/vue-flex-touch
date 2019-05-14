@@ -12,13 +12,12 @@
 
 # demo
 
-[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n0v3orw484?fontsize=14)
+https://n0v3orw484.codesandbox.io/
 
 # Install
 ```shell
 npm install vue-flex-touch
 ```
-
 
 # Usage
 ```javascript
@@ -45,11 +44,22 @@ methods: {
     this.flex = !this.flex;
   }
 }
-
-
 ```
 
-# Interface
+# examle
+
+## base 
+[![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n0v3orw484?fontsize=14)
+
+# options
+
+**timeout**<default 500>
+
+time for long touch. (only mobile)
+
+**isPc**<default true>
+
+If it is true, it will become right click event. (You can use it on PC)
 
 # reference
 
