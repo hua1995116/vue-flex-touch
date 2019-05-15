@@ -59,7 +59,7 @@ methods: {
 |  Prop     |  Type     |   default    | description      |
 |  ---  |  ---  |  ---  |  ---  |
 |   timeout   |  number     | 500      | time for long touch. (only mobile)   |
-|   isPc    |  boolean     |  true     | If it is true, it will become right click event. (You can use it on PC)      |
+|   needSelect    |  boolean     |  false     | If it is true, it will select text)      |
 
 
 # reference

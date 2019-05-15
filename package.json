@@ -1,11 +1,11 @@
 {
   "name": "vue-flex-touch",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "vue-flex-touch both for long press touch on mobile and right click on pc",
   "main": "dist/vue-flex-touch.common.js",
   "module": "dist/vue-flex-touch.esm.js",
   "scripts": {
-    "build": "rollup -c rollup.config.js && uglifyjs dist/vue-flex-touch.js -o dist/vue-flex-touch.min.js"
+    "build": "rollup -c rollup.config.js && uglifyjs dist/vue-flex-touch.js -o dist/vue-flex-touch.v$npm_package_version.min.js"
   },
   "keywords": [
     "touch",
