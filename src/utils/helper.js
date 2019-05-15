@@ -1,4 +1,4 @@
-export const isPc = () => {
+export const isApp = () => {
   return /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
 };
 

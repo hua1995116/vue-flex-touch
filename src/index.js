@@ -1,3 +1,4 @@
+/* eslint-disable */
 import vueFlexTouch from './directives/long-touch';
 
 const install = (Vue, config = {}) => {

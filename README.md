@@ -47,10 +47,15 @@ methods: {
 
 # examle
 
-## base
+## base use
+
+<img width="300" src="pic/2019-05-15&#32;19.28.11.gif"/>
+
 [![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n0v3orw484?fontsize=14)
 
-## use it on chat @
+## used in chat '@'
+
+<img width="300" src="pic/2019-05-15&#32;21.56.46.gif">
 
 [![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/oovv1q83zz?fontsize=14)
 

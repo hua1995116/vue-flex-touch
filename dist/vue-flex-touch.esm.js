@@ -1,4 +1,4 @@
-var isPc = function isPc() {
+var isApp = function isApp() {
   return /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
 };
 var disableSelect = function disableSelect(el) {
@@ -63,29 +63,32 @@ var vueFlexTouch = (function (_ref) {
           }
         };
 
-        if (isPc()) {
+        if (isApp()) {
+          el.addEventListener('touchstart', el._vue_touchstart);
+          el.addEventListener('touchmove', el._vue_touchmove);
+          el.addEventListener('touchend', el._vue_touchend);
+        } else {
+          console.log(11);
           el.addEventListener('mousedown', el._vue_mousedown);
           el.addEventListener('contextmenu', function (e) {
             e.preventDefault();
           });
-        } else {
-          el.addEventListener('touchstart', el._vue_touchstart);
-          el.addEventListener('touchmove', el._vue_touchmove);
-          el.addEventListener('touchend', el._vue_touchend);
         }
       }
     },
     unbind: function unbind(el) {
-      if (isPc()) {
-        el.removeEventListener('mousedown', el._vue_mousedown);
-      } else {
+      if (isApp()) {
         el.removeEventListener('touchstart', el._vue_touchstart);
         el.removeEventListener('touchmove', el._vue_touchmove);
         el.removeEventListener('touchend', el._vue_touchend);
+      } else {
+        el.removeEventListener('mousedown', el._vue_mousedown);
       }
     }
   };
 });
+
+/* eslint-disable */
 
 var install = function install(Vue) {
   var config = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
