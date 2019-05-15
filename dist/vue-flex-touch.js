@@ -32,7 +32,9 @@ var vueFlexTouch = (function () {
     var _ref$timeout = _ref.timeout,
         timeout = _ref$timeout === void 0 ? 500 : _ref$timeout,
         _ref$needSelect = _ref.needSelect,
-        needSelect = _ref$needSelect === void 0 ? false : _ref$needSelect;
+        needSelect = _ref$needSelect === void 0 ? false : _ref$needSelect,
+        _ref$preventDefault = _ref.preventDefault,
+        preventDefault = _ref$preventDefault === void 0 ? true : _ref$preventDefault;
     return {
       bind: function bind(el, _ref2) {
         var value = _ref2.value;
@@ -44,17 +46,17 @@ var vueFlexTouch = (function () {
 
         if (callback && typeof callback === 'function') {
           el._vue_touchstart = function (e) {
-            e.preventDefault();
+            preventDefault && e.preventDefault();
             startflexTimeout(timeout, callback, e);
           };
 
           el._vue_touchmove = function (e) {
-            e.preventDefault();
+            preventDefault && e.preventDefault();
             clearflexTimeout();
           };
 
           el._vue_touchend = function (e) {
-            e.preventDefault();
+            preventDefault && e.preventDefault();
             clearflexTimeout();
           };
 
