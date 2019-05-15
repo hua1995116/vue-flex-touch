@@ -16,7 +16,8 @@ const startflexTimeout = (timeout, cb, e) => {
 
 export default ({
   timeout = 500,
-  needSelect = false
+  needSelect = false,
+  preventDefault = true,
 }) => ({
   bind: (el, { value }) => {
     const callback = value;
@@ -26,17 +27,17 @@ export default ({
 
     if (callback && typeof callback === 'function') {
       el._vue_touchstart = (e) => {
-        e.preventDefault();
+        preventDefault && e.preventDefault();
         startflexTimeout(timeout, callback, e);
       };
 
       el._vue_touchmove = (e) => {
-        e.preventDefault();
+        preventDefault && e.preventDefault();
         clearflexTimeout();
       };
 
       el._vue_touchend = (e) => {
-        e.preventDefault();
+        preventDefault && e.preventDefault();
         clearflexTimeout();
       };
 

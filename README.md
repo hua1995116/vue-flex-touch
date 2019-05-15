@@ -65,6 +65,7 @@ methods: {
 |  ---  |  ---  |  ---  |  ---  |
 |   timeout   |  number     | 500      | time for long touch. (only mobile)   |
 |   needSelect    |  boolean     |  false     | If it is true, it will select text)      |
+|   preventDefault    |  boolean     |  true     | If it is true, it will stop default event)      |
 
 
 # reference
