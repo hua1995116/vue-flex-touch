@@ -1,6 +1,6 @@
 {
   "name": "vue-flex-touch",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "description": "vue-flex-touch both for long press touch on mobile and right click on pc",
   "main": "dist/vue-flex-touch.common.js",
   "module": "dist/vue-flex-touch.esm.js",
