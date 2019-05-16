@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "vue": "^2.5.22",
-    "vue-flex-touch": "latest"
+    "vue-flex-touch": "^0.1.5"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "3.6.0",

@@ -1,6 +1,6 @@
 # vue-flex-touch
 
-> vue-flex-touch both for long press touch on mobile and right click on pc
+> A for Vue.js directive both for long press touch on mobile and right click on pc
 
 <p align="center">
     <a href="https://travis-ci.org/hua1995116/vue-flex-touch"><img src="https://travis-ci.org/hua1995116/vue-flex-touch.svg?branch=master" /></a>
