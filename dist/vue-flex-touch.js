@@ -23,9 +23,9 @@ var vueFlexTouch = (function () {
     }
   };
 
-  var startflexTimeout = function startflexTimeout(timeout, cb, e) {
+  var startflexTimeout = function startflexTimeout(timeout, cb, e, type) {
     clearflexTimeout();
-    flexTimeout = setTimeout(cb.bind(null, e), timeout);
+    flexTimeout = setTimeout(cb.bind(null, e, type), timeout);
   };
 
   var vueFlexTouch = (function (_ref) {
@@ -47,7 +47,7 @@ var vueFlexTouch = (function () {
         if (callback && typeof callback === 'function') {
           el._vue_touchstart = function (e) {
             preventDefault && e.preventDefault();
-            startflexTimeout(timeout, callback, e);
+            startflexTimeout(timeout, callback, e, 'touch');
           };
 
           el._vue_touchmove = function (e) {
@@ -64,7 +64,7 @@ var vueFlexTouch = (function () {
             e.preventDefault(); // 右键 right click
 
             if (e.button === 2) {
-              callback(e);
+              callback(e, 'rightClick');
             }
           };
 
@@ -73,7 +73,6 @@ var vueFlexTouch = (function () {
             el.addEventListener('touchmove', el._vue_touchmove);
             el.addEventListener('touchend', el._vue_touchend);
           } else {
-            console.log(11);
             el.addEventListener('mousedown', el._vue_mousedown);
             el.addEventListener('contextmenu', function (e) {
               e.preventDefault();

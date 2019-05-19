@@ -9,9 +9,9 @@ const clearflexTimeout = () => {
   }
 };
 
-const startflexTimeout = (timeout, cb, e) => {
+const startflexTimeout = (timeout, cb, e, type) => {
   clearflexTimeout();
-  flexTimeout = setTimeout(cb.bind(null, e), timeout);
+  flexTimeout = setTimeout(cb.bind(null, e, type), timeout);
 };
 
 export default ({
@@ -28,7 +28,7 @@ export default ({
     if (callback && typeof callback === 'function') {
       el._vue_touchstart = (e) => {
         preventDefault && e.preventDefault();
-        startflexTimeout(timeout, callback, e);
+        startflexTimeout(timeout, callback, e, 'touch');
       };
 
       el._vue_touchmove = (e) => {
@@ -45,7 +45,7 @@ export default ({
         e.preventDefault();
         // 右键 right click
         if(e.button === 2) {
-          callback(e);
+          callback(e, 'rightClick');
         }
       }
       if(isApp()) {
@@ -53,7 +53,6 @@ export default ({
         el.addEventListener('touchmove', el._vue_touchmove);
         el.addEventListener('touchend', el._vue_touchend);
       } else {
-        console.log(11);
         el.addEventListener('mousedown', el._vue_mousedown);
         el.addEventListener('contextmenu', (e) => {
           e.preventDefault();
