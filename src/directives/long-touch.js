@@ -22,6 +22,7 @@ export default ({
   bind: (el, { value }) => {
     const callback = value;
     if(needSelect) {
+      // If el is text, you can leave it unchecked
       disableSelect(el);
     }
 

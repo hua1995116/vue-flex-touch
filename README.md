@@ -63,9 +63,9 @@ methods: {
 
 |  Prop     |  Type     |   default    | description      |
 |  ---  |  ---  |  ---  |  ---  |
-|   timeout   |  number     | 500      | time for long touch. (only mobile)   |
-|   needSelect    |  boolean     |  false     | If it is true, will select text      |
-|   preventDefault    |  boolean     |  true     | If it is true, will stop default event)      |
+|   timeout   |  number     | 500(ms)     | time for long touch. (only mobile)   |
+|   needSelect    |  boolean     |  false     | If true, select text      |
+|   preventDefault    |  boolean     |  true     | If true, stop default event)      |
 
 # API
 
