@@ -9,7 +9,7 @@
     <a href="https://www.npmjs.com/package/vue-flex-touch" rel="nofollow"><img src="https://img.shields.io/npm/l/vue-flex-touch.svg?style=flat" style="max-width:100%;"></a>
 </p>
 
-# demo
+# Demo
 
 https://n0v3orw484.codesandbox.io/
 
@@ -45,7 +45,7 @@ methods: {
 }
 ```
 
-# examle
+# Examle
 
 ## base use
 
@@ -59,7 +59,7 @@ methods: {
 
 [![Edit Vue Template](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/oovv1q83zz?fontsize=14)
 
-# config
+# Options
 
 |  Prop     |  Type     |   default    | description      |
 |  ---  |  ---  |  ---  |  ---  |
@@ -67,9 +67,18 @@ methods: {
 |   needSelect    |  boolean     |  false     | If it is true, will select text      |
 |   preventDefault    |  boolean     |  true     | If it is true, will stop default event)      |
 
+# API
 
-# reference
+```
+vue-flex-touch="handleTouch"
 
+handleTouch(e, type) => void
+```
+
+Arguements:
+
+- **e** `{Object}` event callback
+- **type** `'touch'|'rightClick'` enum type
 
 # License
 
