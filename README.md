@@ -1,6 +1,6 @@
 # vue-flex-touch
 
-> A for Vue.js directive both for long press touch on mobile and right click on pc
+> A Vue.js directive both for long press touch on mobile and right click on pc
 
 <p align="center">
     <a href="https://travis-ci.org/hua1995116/vue-flex-touch"><img src="https://travis-ci.org/hua1995116/vue-flex-touch.svg?branch=master" /></a>
@@ -64,8 +64,8 @@ methods: {
 |  Prop     |  Type     |   default    | description      |
 |  ---  |  ---  |  ---  |  ---  |
 |   timeout   |  number     | 500      | time for long touch. (only mobile)   |
-|   needSelect    |  boolean     |  false     | If it is true, it will select text)      |
-|   preventDefault    |  boolean     |  true     | If it is true, it will stop default event)      |
+|   needSelect    |  boolean     |  false     | If it is true, will select text      |
+|   preventDefault    |  boolean     |  true     | If it is true, will stop default event)      |
 
 
 # reference
