@@ -6,7 +6,8 @@
   "module": "dist/vue-flex-touch.esm.js",
   "scripts": {
     "update": "auto-vers -t",
-    "build": "rollup -c rollup.config.js && uglifyjs dist/vue-flex-touch.js -o dist/vue-flex-touch.v$npm_package_version.min.js"
+    "build": "rollup -c rollup.config.js && uglifyjs dist/vue-flex-touch.js -o dist/vue-flex-touch.v$npm_package_version.min.js",
+    "e2e": "./node_modules/karma/bin/karma start"
   },
   "keywords": [
     "touch",
@@ -22,8 +23,17 @@
     "@babel/core": "^7.4.0",
     "@babel/preset-env": "^7.4.2",
     "auto-vers": "^1.0.3",
-    "rollup": "^1.7.2",
+    "jasmine-core": "^3.4.0",
+    "karma": "^4.1.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^2.0.0",
+    "karma-jasmine": "^2.0.1",
+    "karma-rollup-preprocessor": "^7.0.0",
+    "rollup": "^1.12.0",
     "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0",
+    "rollup-plugin-replace": "^2.2.0",
     "uglify-js": "^3.5.12"
   },
   "dependencies": {
